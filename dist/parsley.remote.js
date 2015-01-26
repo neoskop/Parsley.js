@@ -265,7 +265,7 @@ window.ParsleyConfig.validators.remote = {
 /*!
 * Parsleyjs
 * Guillaume Potier - <guillaume@wisembly.com>
-* Version 2.0.6 - built Sat Jan 24 2015 14:44:37
+* Version 2.0.7 - built Mon Jan 26 2015 15:06:22
 * MIT Licensed
 *
 */
@@ -1232,7 +1232,7 @@ var Validator = ( function ( ) {
             assert = new Validator.Assert().Regexp('^\\d+$');
             break;
           case 'alphanum':
-            assert = new Validator.Assert().Regexp('^\\w+$', 'i');
+            assert = new Validator.Assert().Regexp('^[\\w\\u00c0-\\u2c6c]+$', 'i');
             break;
           case 'url':
             assert = new Validator.Assert().Regexp('(https?:\\/\\/)?(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,24}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)', 'i');
@@ -2148,7 +2148,7 @@ window.ParsleyConfig.i18n.en = $.extend(window.ParsleyConfig.i18n.en || {}, {
 if ('undefined' !== typeof window.ParsleyValidator)
   window.ParsleyValidator.addCatalog('en', window.ParsleyConfig.i18n.en, true);
 
-//     Parsley.js 2.0.6
+//     Parsley.js 2.0.7
 //     http://parsleyjs.org
 //     (c) 20012-2014 Guillaume Potier, Wisembly
 //     Parsley may be freely distributed under the MIT license.
@@ -2156,7 +2156,7 @@ if ('undefined' !== typeof window.ParsleyValidator)
   // ### Parsley factory
   var Parsley = function (element, options, parsleyFormInstance) {
     this.__class__ = 'Parsley';
-    this.__version__ = '2.0.6';
+    this.__version__ = '2.0.7';
     this.__id__ = ParsleyUtils.hash(4);
     // Parsley must be instantiated with a DOM element or jQuery $element
     if ('undefined' === typeof element)

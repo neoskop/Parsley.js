@@ -135,7 +135,7 @@ define('parsley/validator', [
             assert = new Validator.Assert().Regexp('^\\d+$');
             break;
           case 'alphanum':
-            assert = new Validator.Assert().Regexp('^\\w+$', 'i');
+            assert = new Validator.Assert().Regexp('^[\\w\\u00c0-\\u2c6c]+$', 'i');
             break;
           case 'url':
             assert = new Validator.Assert().Regexp('(https?:\\/\\/)?(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,24}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)', 'i');
